@@ -24,6 +24,7 @@ jake.greet();
 jake.describe();
 
 // =================================================================
+
 console.log('');
 
 // ES6 Class
@@ -108,3 +109,67 @@ dog.bark = () => {
   console.log('woof');
 };
 dog.bark();
+
+// =================================================================
+
+// Getters & Setters
+
+class BankAccount {
+  private _balance: number;
+
+  constructor(balance: number) {
+    this._balance = balance;
+  }
+
+  // Use getters for computed or read-only properties that conceptually feel like data (e.g., balance, area, isActive).
+  get getBalance(): number {
+    return this._balance;
+  }
+
+  // Setter
+  set deposit(amount: number) {
+    this._balance += amount;
+  }
+}
+
+let shawn = new BankAccount(1200);
+
+console.log(shawn.getBalance);
+
+// In JavaScript and TypeScript, setters are accessed like properties, not called as methods.
+shawn.deposit = 400;
+
+console.log(shawn.getBalance);
+
+import { StringHelper } from './stringHelper';
+
+console.log(StringHelper.upperCase('isaiah'));
+console.log(StringHelper.reverse('Dave'));
+
+
+// =================================================================
+
+// Object Method Overriding 
+
+console.log('')
+
+class Vehicle {
+  make: string;
+  move(){
+    console.log("this vehilce moves");
+  }
+  getBrand(){
+    console.log("car brand")
+  }
+}
+
+class Car extends Vehicle{
+  move(){
+    super.move();
+    console.log("the car drives");
+  }
+}
+
+let honda = new Car()
+
+honda.move()
