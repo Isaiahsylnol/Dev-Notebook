@@ -1,0 +1,54 @@
+// _variables.scss
+
+// Backgrounds
+$background-light: #f8f9fa;
+$background-dark: #1a1a1a;
+
+// Primary Brand
+$color-primary: #b0d5db;
+$color-accent: #007bff;
+
+// UI Structure
+$color-header-bg: #f0f0f0;
+$color-header-text: #333333;
+$color-table-bg: #e8f5e9;
+$color-table-alt: #c8e6c9;
+$color-table-header: #f5f5f5;
+
+// Colors
+$color-success: #28a745;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-disabled: #e0e0e0;
+$color-text: #212529;
+$color-muted: #6c757d;
+$color-link: #0056b3;
+$color-hover: #dd669f;
+
+// Borders & Shadows
+$border-color: #dee2e6;
+$border-radius: 8px;
+$box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Fonts
+$font-heading: 'Georgia', serif;
+$font-body: 'Arial', sans-serif;
+$font-monospace: 'Courier New', Courier, monospace;
+
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+
+// Spacing 
+$spacing-unit: 1rem;
+$gap-xxs: 4px;
+$gap-xs: 8px;
+$gap-sm: 12px;
+$gap-md: 16px;
+$gap-lg: 24px;
+$gap-xl: 32px;
+$gap-xxl: 48px;
+
+// Layout
+$layout-padding: $gap-lg;
+$max-width: 1200px;

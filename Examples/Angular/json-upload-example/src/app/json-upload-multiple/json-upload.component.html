@@ -1,0 +1,26 @@
+<h2>Upload Multiple JSON Files</h2>
+<input type="file" (change)="onFilesSelected($event)" accept=".json" multiple />
+
+<button *ngIf="uploadedFiles.length" (click)="clearAll()">Clear All</button>
+<hr />
+
+<div *ngFor="let file of uploadedFiles; let i = index">
+  <h3>{{ file.fileName }}</h3>
+
+  <h4>All Users</h4>
+  <ul>
+    <li *ngFor="let user of file.data">
+      {{ user.name }} ({{ user.email }}) - Active: {{ user.isActive }}
+      <button (click)="toggleActive(i, user)">Toggle</button>
+    </li>
+  </ul>
+
+  <h4>Active Users</h4>
+  <ul>
+    <li *ngFor="let user of getActiveUsers(file)">
+      {{ user.name }} ({{ user.email }})
+    </li>
+  </ul>
+
+  <hr />
+</div>

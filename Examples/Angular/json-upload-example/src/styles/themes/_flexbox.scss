@@ -1,0 +1,31 @@
+// _flexbox.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin flex-column($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+  }
+  
+  @mixin flex-row($gap: 0) {
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+  }
+  @mixin layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }

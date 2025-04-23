@@ -1,0 +1,50 @@
+
+  <div class="upload-body layout-wrapper">
+  <h2>Upload a JSON File</h2>
+    <input type="file" (change)="onFileSelected($event)" accept=".json" />
+    <div class="body-1">
+    <!-- <div *ngIf="jsonContent">
+      <h3>File Content:</h3>
+      <pre>{{ jsonContent | json }}</pre>
+    </div>
+     -->
+     <table class="table">
+      <thead *ngIf="jsonContent">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of jsonContent">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.isActive }}
+          </td>
+          <td>
+            <button (click)="toggleActive(user)">Toggle</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <h4>User List</h4>
+    <li *ngFor="let user of jsonContent">
+      {{ user.name }} - Active: {{ user.isActive }}
+      <button (click)="toggleActive(user)">Toggle</button>
+    </li> -->
+    
+  </div>
+  <div>
+    <h4>Active Users</h4>
+    <ul>
+      <li *ngFor="let user of activeUsers">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+  <button (click)="clearJson()">Clear Uploaded JSON</button>
+  </div>
